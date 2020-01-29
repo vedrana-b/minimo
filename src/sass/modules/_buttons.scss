@@ -1,0 +1,55 @@
+@import "../helpers/variables";
+
+.btn {
+    cursor: pointer;
+}
+
+.section {
+    &-container_button {
+        text-align: center;
+        padding: 5%;
+    }
+
+    &-button {
+        padding: 20px 30px;
+        border: 1px solid rgba(20, 20, 20, 0.664);
+    }
+    &-button:hover {
+       color: tomato;
+    }
+}
+
+.js-hide-btn {
+    display: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+.menu-icon:hover::after {
+    background: white;
+    box-shadow: 0 7px 0 #ffffff, 0 14px 0 white;
+}
+
+.sign-up {
+    &__button {
+        padding: 10px;
+        border-bottom:  2px solid $body-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+.fa-long-arrow-alt-right:hover {
+    color:tomato;
+    -webkit-transform: scale(1.7);
+        -ms-transform: scale(1.7);
+        transform: scale(1.7);
+     
+}
+.fa-long-arrow-alt-right {
+    transition: transform 0.5s ease-in;
+    transform: scale(1.4);
+}

@@ -1,0 +1,10 @@
+@import "../sass/helpers/mixin";
+
+#js-last-element {
+    display: none;
+}
+.js-show-element {
+    display: flex;
+    @include fadeIn;
+
+}

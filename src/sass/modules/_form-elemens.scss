@@ -1,0 +1,33 @@
+@import "../helpers/variables";
+
+.sign-up {
+    &__input {
+        display: inline-flex;
+        border: none;
+        border-bottom: 2px solid $body-color;
+        background: transparent;
+        box-shadow: none;
+        margin: 0;
+        &-container {
+            width: 300px;
+            margin: 0 auto;
+            display: flex;
+            position: relative;
+        }
+    }
+    &__input:focus {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        border-bottom: 2px solid $body-color;
+    }
+
+}
+
+input::placeholder {
+    color:$body-color;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}

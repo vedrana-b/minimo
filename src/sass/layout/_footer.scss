@@ -1,0 +1,29 @@
+@import "../helpers/variables";
+
+
+.footer{
+    &-container {
+        padding: 0 10%;
+        background: $background-gray;
+    }
+    &-span { 
+        padding-right:20px;
+    }
+    &-icon {
+        padding-right: 20px;
+        color:rgba(20, 20, 20, 0.664);
+
+     }
+    &-content {
+        height: 100px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .footer {
+        &-content__blocks {
+            text-align: center;
+        }
+    }
+}
