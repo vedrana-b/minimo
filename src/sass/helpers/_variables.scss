@@ -1,13 +1,18 @@
-
 //Font settings
-
-$playfair-display: 'Playfair Display', serif; 
+$playfair-display: "Playfair Display", serif;
 
 //Colors
-
 $body-color: rgba(20, 20, 20, 0.664);
 $heading-color: rgba(20, 20, 20, 0.438);
 
 //Background colors
+$background-gray: gainsboro;
 
-$background-gray : gainsboro;
+$menu-bg: tomato;
+$menu-color: #ffffff;
+$menu-font-size: 2.5rem;
+$menu-zindex: 1100;
+$hamburger-color: white;
+$hamburger-width: 50px;
+$hamburger-height: 50px;
+$hamburger-zindex: $menu-zindex + 10;

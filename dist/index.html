@@ -17,29 +17,36 @@
 
 <body>
     <div class="grid-container full grid-frame">
-        <section class="header-container">
-            <nav class="nav grid-x grid-form">
-                <div class="nav--heading cell large-5 medium-4 small-4">
+        <section class="header__container">
+            <nav class="nav grid-x">
+                <div class="nav__title cell large-5 medium-4 small-4">
                     <h1>MINIMØ</h1>
                 </div>
-                <div class="cell large-7 nav__menu medium-8 small-8">
-                    <div class="top-bar-right">
-                        <ul class="menu nav__menu--list dropdown vertical medium-horizontal" data-dropdown-menu>
+                <nav class="navigation large-7 medium-8 small-8">
+                    <button class="toggle-menu">
+                        <span></span>
+                    </button>
+                </nav>
+                <div class="" id="menu">
+                    <div class="main-nav">
+                        <ul class="main-nav__list">
                             <li><a class="nav__menu--item" href="#lifestyle">LIFESTYLE</a></li>
                             <li><a class="nav__menu--item" href="#photodiary">PHOTODIARY</a></li>
                             <li><a class="nav__menu--item" href="#music">MUSIC</a></li>
                             <li><a class="nav__menu--item" href="#travel">TRAVEL</a></li>
                         </ul>
+
                     </div>
                 </div>
+
             </nav>
             <header class="header">
-                <img class="header--img" src="../src/img/homepage.jpg">
+                <img class="header__img" src="../src/img/homepage.jpg">
             </header>
         </section>
-        <main class="section-container">
-            <section class="grid-x">
-                <h6 id="photodiary" class="section-heading cell">PHOTODIARY</h6>
+        <main class="grid-container">
+            <section class="grid-x grid-padding-x" id="photodiary">
+                <h6 class="section__heading cell">PHOTODIARY</h6>
                 <h3>The perfect weekend getaway</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam quis
                     efficitur odio, et porta est. Aliquam scelerisque enim vel magna sollicitudin convallis vitae ac
@@ -65,12 +72,12 @@
                     pulvinar
                     luctus..
                 </p>
-                <h6 class="section-heading cell section-comment section-comment-1">LEAVE A COMMENT</h6>
+                <h6 class="cell section__comment">LEAVE A COMMENT</h6>
             </section>
-            <section class="grid-x">
-                <div class="columns section-columns_right large-6 text-left">
-                    <img class="section-img" src="../src/img/music-festival.jpg">
-                    <h6 id="lifestyle" class="section-heading cell">LIFESTYLE</h6>
+            <section class="grid-x grid-padding-x" id="music">
+                <div class="cell medium-6 large-6 text-left">
+                    <img class="section__img" src="../src/img/music-festival.jpg">
+                    <h6 class="section__heading cell">MUSIC</h6>
                     <h3>More than just a music festival</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -82,9 +89,9 @@
                         luctus.
                     </p>
                 </div>
-                <div class="columns section-columns_left large-6 text-left">
-                    <img class="section-img" src="../src/img/coffee.jpg">
-                    <h6 class="section-heading cell">LIFESTYLE</h6>
+                <div class="cell medium-6 large large-6 text-left">
+                    <img class="section__img" src="../src/img/coffee.jpg">
+                    <h6 class="section__heading cell">LIFESTYLE</h6>
                     <h3>Life tastes better with coffee</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -97,10 +104,10 @@
                     </p>
                 </div>
             </section>
-            <section class="grid-x">
-                <div class="columns section-columns_right large-6 text-left">
-                    <img id="travel" class="section-img" src="../src/img/bridge.jpg">
-                    <h6 class="section-heading cell">LIFESTYLE</h6>
+            <section class="grid-x grid-padding-x" id="travel">
+                <div class="cell medium-6 large-6 text-left">
+                    <img class="section__img" src="../src/img/bridge.jpg">
+                    <h6 class="section__heading cell">TRAVEL</h6>
                     <h3>American dream</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -112,9 +119,9 @@
                         luctus.
                     </p>
                 </div>
-                <div class="columns section-columns_left large-6 text-left">
-                    <img class="section-img" src="../src/img/person.jpg">
-                    <h6 class="section-heading cell">LIFESTYLE</h6>
+                <div class="cell medium-6 large-6 text-left">
+                    <img class="section__img" src="../src/img/person.jpg">
+                    <h6 class="section__heading cell">TRAVEL</h6>
                     <h3>A day exploring the Alps</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -128,60 +135,26 @@
                 </div>
             </section>
         </main>
-        <section class="grid-x sign-up sign-up-container">
-
-            <div class="cell sign-up_newsletter">
+        <section class="grid-container sign-up">
+            <div class="grid-x grid-padding-x sign-up__newsletter">
                 <h3>
                     Sign up for our newsletter!
                 </h3>
             </div>
-            <div class="cell sign-up_email">
+            <div class="grid-x grid-padding-x sign-up_email">
                 <div class="cell sign-up__input-container">
                     <input class="sign-up__input" type="text" placeholder="Enter a valid email address">
-                    <button class="sign-up__button">
+                    <button class="btn__signup">
                         <i class="fas fa-long-arrow-alt-right"></i>
                     </button>
                 </div>
             </div>
         </section>
-        <section class="grid-x section-container">
-            <div class="columns section-columns_right large-6 text-left">
-                <img id="music" class="section-img" src="../src/img/girl.jpg">
-                <h6 class="section-heading cell">LIFESTYLE</h6>
-                <h3>Top 10 song for running </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
-                    quis
-                    purus.
-                    Suinar bibendum. Mauris vel nisi ut velit finibus tempor. Ut efficitur non mi et
-                    condimentum.
-                    Nulla accumsan vitae velit ac rhoncus. Aliquam erat volutpat. Curabitur blandit odio in
-                    pulvinar
-                    luctus.
-                </p>
-            </div>
-            <div class="columns section-columns_left large-6 text-left">
-                <img class="section-img" src="../src/img/road.jpg">
-                <h6 class="section-heading cell">LIFESTYLE</h6>
-                <h3>Cold winter days</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
-                    quis
-                    purus.
-                    Suinar bibendum. Mauris vel nisi ut velit finibus tempor. Ut efficitur non mi et
-                    condimentum.
-                    Nulla accumsan vitae velit ac rhoncus. Aliquam erat volutpat. Curabitur blandit odio in
-                    pulvinar
-                    luctus.
-                </p>
-            </div>
-            <div class="columns large-12 medium-12 small-12 section-container_button">
-                <button id="js-button" class="btn section-button">
-                    Load more
-                </button>
-            </div>
-            <div class="grid-x large-12" id="js-last-element">
-                <div class="columns section-columns_right large-6 text-left">
-                    <img class="section-img" src="../src/img/bridge.jpg">
-                    <h6 class="section-heading cell">LIFESTYLE</h6>
+        <section class="grid-container">
+            <section class="grid-x grid-padding-x" id="travel">
+                <div class="cell medium-6 large-6 text-left">
+                    <img id="music" class="section__img" src="../src/img/girl.jpg">
+                    <h6 class="section__heading cell">LIFESTYLE</h6>
                     <h3>Top 10 song for running </h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -193,9 +166,44 @@
                         luctus.
                     </p>
                 </div>
-                <div class="columns section-columns_left large-6 text-left">
-                    <img class="section-img" src="../src/img/person.jpg">
-                    <h6 class="section-heading cell">LIFESTYLE</h6>
+                <div class="cell medium-6 large-6 text-left">
+                    <img class="section__img" src="../src/img/road.jpg">
+                    <h6 class="section__heading cell">LIFESTYLE</h6>
+                    <h3>Cold winter days</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
+                        quis
+                        purus.
+                        Suinar bibendum. Mauris vel nisi ut velit finibus tempor. Ut efficitur non mi et
+                        condimentum.
+                        Nulla accumsan vitae velit ac rhoncus. Aliquam erat volutpat. Curabitur blandit odio in
+                        pulvinar
+                        luctus.
+                    </p>
+                </div>
+            </section>
+            <div class="grid-x grid-padding-x large-12 medium-12 small-12 btn__container">
+                <button id="js-button" class="btn btn__section">
+                    Load more
+                </button>
+            </div>
+            <div class="grid-x grid-padding-x large-12" id="js-last-element">
+                <div class="cell medium-6 large large-6 text-left">
+                    <img class="section__img" src="../src/img/bridge.jpg">
+                    <h6 class="section__heading cell">LIFESTYLE</h6>
+                    <h3>Top 10 song for running </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
+                        quis
+                        purus.
+                        Suinar bibendum. Mauris vel nisi ut velit finibus tempor. Ut efficitur non mi et
+                        condimentum.
+                        Nulla accumsan vitae velit ac rhoncus. Aliquam erat volutpat. Curabitur blandit odio in
+                        pulvinar
+                        luctus.
+                    </p>
+                </div>
+                <div class="cell medium-6 large large-6 text-left">
+                    <img class="section__img" src="../src/img/person.jpg">
+                    <h6 class="section__heading cell">LIFESTYLE</h6>
                     <h3>Cold winter days</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum posuere porta. Aliquam
                         quis
@@ -209,17 +217,17 @@
                 </div>
             </div>
         </section>
-        <footer class="footer footer-container large-12">
-            <div class="footer-content grid-x grid-form align-middle">
-                <div class="footer-content__blocks cell large-6 medium-6 small-12">
-                    <a><span class="footer-span"> Terms and conditions </span></a>
-                    <a><span class="footer-span"> Privacy </span></a>
+        <footer class="footer footer__container large-12">
+            <div class="footer__content grid-x grid-form align-middle">
+                <div class="footer__content--items cell large-6 medium-6 small-12">
+                    <a><span class="footer__span"> Terms and conditions </span></a>
+                    <a><span class="footer__span"> Privacy </span></a>
                 </div>
-                <div class="footer-content__blocks cell large-6 text-right medium-6 small-12">
-                    <a><span class="footer-span"> Follow </span></a>
-                    <a><i class="footer-icon fab fa-facebook-f"></i></a>
-                    <a><i class="footer-icon fab fa-twitter"></i></a>
-                    <a><i class="footer-icon fab fa-instagram"></i></a>
+                <div class="footer__content--items cell large-6 text-right medium-6 small-12">
+                    <a><span class="footer__span"> Follow </span></a>
+                    <a><i class="footer__icon fab fa-facebook-f"></i></a>
+                    <a><i class="footer__icon fab fa-twitter"></i></a>
+                    <a><i class="footer__icon fab fa-instagram"></i></a>
                 </div>
             </div>
         </footer>

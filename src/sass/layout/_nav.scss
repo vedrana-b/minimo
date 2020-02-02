@@ -1,19 +1,36 @@
 .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 50px 0 0;
-  &__menu {
-    align-self: center;
-    &--list {
-      justify-content: space-between;
-    }
+  &__title {
+    align-items: center;
     &--item {
       text-decoration: none;
       color: rgba(20, 20, 20, 0.568);
       font-size: 1.2em;
     }
   }
-  &--heading {
-    position: relative;
+}
+
+.main-nav {
+  &__list {
+    display: flex;
+    list-style-type: none;
+    & > li {
+      @media only screen and (max-width: 1200px) {
+        margin-right: 3rem;
+      }
+      margin-right: 4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
+}
+
+.navigation {
+  display: none;
 }
 
 a {
@@ -26,28 +43,160 @@ a:hover {
   color: tomato;
 }
 
-// Media queries
-@media only screen and (max-width: 1185px) {
-  .menu {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 950px) and (min-width: 640px) {
-  .nav__menu--list {
+@media only screen and (max-width: 893px) {
+  .navigation {
+    display: inline-flex;
     justify-content: flex-end;
-    align-items: flex-end;
   }
-  .menu.medium-horizontal {
-    flex-direction: column;
-  }
-}
 
-@media only screen and (max-width: 640px) {
   .nav {
+    align-items: initial;
+  }
+
+  #menu {
+    background: $menu-bg;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    visibility: hidden;
+    width: 100%;
+    z-index: $menu-zindex;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+
+      @for $i from 1 through 10 {
+        li:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+
+      li {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp;
+      }
+    }
+
+    ul {
+      &:hover {
+        a {
+          opacity: 0.5;
+        }
+      }
+
+      a {
+        -webkit-transform: translateZ(0);
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .main-nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        & > li {
+          margin-right: 0;
+        }
+      }
+      a {
+        color: $menu-color;
+        display: block;
+        font-size: $menu-font-size;
+        font-weight: bold;
+        padding: 1rem 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:first {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  // Hamburger menu toggler
+  .toggle-menu {
+    background-color: tomato;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    height: $hamburger-height;
+    outline: none;
     padding: 0;
-    &--heading {
-      padding: 20px 10px;
+    pointer-events: initial;
+    position: relative;
+    vertical-align: middle;
+    width: $hamburger-width;
+    z-index: $hamburger-zindex;
+
+    span {
+      background-color: $hamburger-color;
+      content: "";
+      display: block;
+      height: 2px;
+      left: calc(50% - 13px);
+      position: absolute;
+      top: calc(50% - 1px);
+      transform-origin: 50% 50%;
+      transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+        transform 0.2s linear;
+      width: 26px;
+
+      &:before,
+      &:after {
+        background-color: $hamburger-color;
+        content: "";
+        display: block;
+        height: 2px;
+        position: absolute;
+        transform-origin: 50% 50%;
+        transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out,
+          transform 0.2s linear;
+        width: 26px;
+      }
+
+      &:before {
+        top: 7px;
+      }
+
+      &:after {
+        top: -7px;
+      }
+    }
+
+    &.active {
+      span {
+        background-color: transparent;
+        transition: background-color 0.2s ease-out;
+
+        &:before,
+        &:after {
+          transition: top 0.2s ease-out, transform 0.2s 0.2s ease-out;
+        }
+
+        &:before {
+          top: 0;
+          transform: rotate3d(0, 0, 1, -45deg);
+        }
+
+        &:after {
+          top: 0;
+          transform: rotate3d(0, 0, 1, 45deg);
+        }
+      }
     }
   }
 }
