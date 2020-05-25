@@ -2,15 +2,22 @@
 
 .footer {
   &__container {
-    padding: 0 10%;
     background: $background-gray;
+    padding: 0 10%;
   }
   &__span {
+    color: rgba(20, 20, 20, 0.664);
     padding-right: 20px;
+    &:hover {
+      color: coral;
+    }
   }
   &__icon {
     padding-right: 20px;
     color: rgba(20, 20, 20, 0.664);
+    &:hover {
+      color: coral;
+    }
   }
   &__content {
     height: 100px;

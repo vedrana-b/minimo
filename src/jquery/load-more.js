@@ -9,7 +9,22 @@ $(document).ready(function () {
   });
 });
 
-$('.toggle-menu, .nav__menu--item').click(function () {
-  $(this).toggleClass('active');
-  $('#menu').toggleClass('open');
-});
+
+
+(function() {
+
+  var hamburger = {
+    navToggle : document.querySelector('.nav-toggle'),
+    nav: document.querySelector('.nav__menu'),
+
+    doToggle: function(e) {
+      //e.preventDefault();
+      this.navToggle.classList.toggle('expanded');
+      this.nav.classList.toggle('expanded');
+    }
+  };
+
+  hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
+
+}());
