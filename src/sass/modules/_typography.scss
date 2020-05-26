@@ -1,52 +1,52 @@
 @import "../helpers/mixin";
 @import "../helpers/variables";
 @font-face {
-  font-family: "Playfair Display", serif;
-  src: url("../../font/Playfair_Display/PlayfairDisplay-Regular.ttf");
+    font-family: "Playfair Display", serif;
+    src: url("../../font/Playfair_Display/PlayfairDisplay-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Ubuntu", sans-serif;
-  src: url("../../font/Ubuntu/Ubuntu-Regular.ttf");
+    font-family: "Ubuntu", sans-serif;
+    src: url("../../font/Ubuntu/Ubuntu-Regular.ttf");
 }
 
 .nav--heading {
-  h1 {
-    letter-spacing: 7px;
-    font-family: $playfair-display;
-  }
+    h1 {
+        letter-spacing: 7px;
+        font-family: $playfair-display;
+    }
 }
 
 .nav__menu--item {
-  font-family: $playfair-display;
+    font-family: $playfair-display;
 }
 
 p {
-  @include serif-gray;
+    @include serif-gray;
 }
 
 .section__heading,
 .section__comment {
-  font-family: "Ubuntu", sans-serif;
-  color: $heading-color;
+    font-family: "Ubuntu", sans-serif;
+    color: $heading-color;
 }
 
 h3 {
-  @include serif-gray;
+    @include serif-gray;
 }
 
 .btn__section {
-  @include serif-gray;
+    @include serif-gray;
 }
 
 .footer__container {
-  font-family: $playfair-display;
+    font-family: $playfair-display;
 }
 
 input::placeholder {
-  font-family: $playfair-display;
+    font-family: $playfair-display;
 }
 
 input:focus {
-  font-family: $playfair-display;
+    font-family: $playfair-display;
 }

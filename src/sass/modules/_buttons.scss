@@ -1,48 +1,48 @@
 @import "../helpers/variables";
 
 .btn {
-  cursor: pointer;
-  &__container {
-    justify-content: center;
-    padding: 5%;
-  }
-  &__section {
-    padding: 20px 30px;
-    border: 1px solid rgba(20, 20, 20, 0.664);
-    &:hover {
-      color: tomato;
-    }
-  }
-  &__signup {
-    padding: 10px;
-    border-bottom: 2px solid $body-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-  }
+    &__container {
+        justify-content: center;
+        padding: 5%;
+    }
+    &__section {
+        padding: 20px 30px;
+        border: 1px solid rgba(20, 20, 20, 0.664);
+        &:hover {
+            color: tomato;
+        }
+    }
+    &__signup {
+        padding: 10px;
+        border-bottom: 2px solid $body-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
 }
 
 .js-hide-btn {
-  display: none;
+    display: none;
 }
 
 button:focus {
-  outline: none;
+    outline: none;
 }
 
 .menu-icon:hover::after {
-  background: white;
-  box-shadow: 0 7px 0 #ffffff, 0 14px 0 white;
+    background: white;
+    box-shadow: 0 7px 0 #ffffff, 0 14px 0 white;
 }
 
 .fa-long-arrow-alt-right:hover {
-  color: tomato;
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
+    color: tomato;
+    -webkit-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    transform: scale(1.7);
 }
 .fa-long-arrow-alt-right {
-  transition: transform 0.5s ease-in;
-  transform: scale(1.4);
+    transition: transform 0.5s ease-in;
+    transform: scale(1.4);
 }
