@@ -125,6 +125,11 @@ button:focus {
   padding: 50px 0 0; }
   .nav__title {
     align-items: center; }
+    @media only screen and (max-width: 650px) {
+      .nav__title {
+        padding-left: 1rem; }
+        .nav__title h1 {
+          font-size: 2rem; } }
     .nav__title--item {
       text-decoration: none;
       color: rgba(20, 20, 20, 0.568);
@@ -134,11 +139,6 @@ a:hover {
   color: tomato; }
 
 .nav__menu {
-  -webkit-transition: left 0.5s ease;
-  -moz-transition: left 0.5s ease;
-  -ms-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  transition: left 0.5s ease;
   background: coral;
   cursor: pointer;
   font-size: 2rem;
@@ -147,6 +147,11 @@ a:hover {
   padding: 6rem 2rem 2rem 2rem;
   position: fixed;
   top: 0;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
   width: 20rem;
   z-index: 1; }
   .nav__menu--item {
@@ -156,26 +161,29 @@ a:hover {
   right: 0; }
 
 .nav__menu ul {
+  list-style: none;
+  margin: 0;
   position: absolute;
+  padding: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+  transform: translateY(-50%); }
 
 .nav-toggle {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
   cursor: pointer;
   height: 2rem;
   right: 2rem;
   position: fixed;
   top: 2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   width: 3.6rem;
   z-index: 2; }
+  @media only screen and (max-width: 650px) {
+    .nav-toggle {
+      width: 2.6rem; } }
 
 .nav-toggle:hover {
   opacity: 0.8; }
